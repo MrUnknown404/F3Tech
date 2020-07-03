@@ -1,30 +1,30 @@
 package mrunknown404.randomtech.items;
 
+import java.util.Arrays;
+
 import javax.annotation.Nullable;
 
+import mrunknown404.randomtech.util.ModConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItemFrame;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockPos.MutableBlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemMagneticCompass extends Item {
 	public ItemMagneticCompass() {
 		addPropertyOverride(new ResourceLocation("angle"), new IItemPropertyGetter() {
-			@SideOnly(Side.CLIENT)
-			double rotation;
-			@SideOnly(Side.CLIENT)
-			double rota;
-			@SideOnly(Side.CLIENT)
+			double rotation, rota;
 			long lastUpdateTick;
 			
-			@SideOnly(Side.CLIENT)
+			@Override
 			public float apply(ItemStack stack, @Nullable World world, @Nullable EntityLivingBase entityIn) {
 				if (entityIn == null && !stack.isOnItemFrame()) {
 					return 0;
@@ -35,10 +35,21 @@ public class ItemMagneticCompass extends Item {
 					world = entity.world;
 				}
 				
+				double atan = Math.atan(-90);
+				if (!ModConfig.compass_ignore_metal && entity instanceof EntityPlayer) {
+					int range = ModConfig.compass_metal_range;
+					for (MutableBlockPos b : BlockPos.getAllInBoxMutable(entity.getPosition().add(-range, -range, -range), entity.getPosition().add(range, range, range))) {
+						if (Arrays.asList(ModConfig.metal_blocks).contains(world.getBlockState(b).getBlock().getRegistryName().toString())) {
+							atan = Math.atan2(b.getZ() + 0.5 - entity.posZ, b.getX() + 0.5 - entity.posX);
+							break;
+						}
+					}
+				}
+				
 				double d0;
 				if (world.provider.isSurfaceWorld()) {
 					double d1 = entityIn != null ? (double) entity.rotationYaw : MathHelper.wrapDegrees(180 + ((EntityItemFrame) entity).facingDirection.getHorizontalIndex() * 90),
-							d2 = Math.atan(-90) / (Math.PI * 2);
+							d2 = atan / (Math.PI * 2);
 					d1 = MathHelper.positiveModulo(d1 / 360, 1);
 					d0 = 0.5 - (d1 - 0.25 - d2);
 				} else {
@@ -52,7 +63,6 @@ public class ItemMagneticCompass extends Item {
 				return MathHelper.positiveModulo((float) d0, 1);
 			}
 			
-			@SideOnly(Side.CLIENT)
 			private double wobble(World world, double amount) {
 				if (world.getTotalWorldTime() != lastUpdateTick) {
 					lastUpdateTick = world.getTotalWorldTime();
