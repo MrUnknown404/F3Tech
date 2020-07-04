@@ -1,0 +1,35 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "randomtech:items/depth_meter/depth_meter_000"
+    },
+    "overrides": [
+        { "predicate": { "depth": -1 }, "model": "randomtech:item/depth_meter/depth_meter_xxx" },
+        { "predicate": { "depth": 0 }, "model": "randomtech:item/depth_meter" },
+        { "predicate": { "depth": 10 }, "model": "randomtech:item/depth_meter/depth_meter_010" },
+        { "predicate": { "depth": 20 }, "model": "randomtech:item/depth_meter/depth_meter_020" },
+        { "predicate": { "depth": 30 }, "model": "randomtech:item/depth_meter/depth_meter_030" },
+        { "predicate": { "depth": 40 }, "model": "randomtech:item/depth_meter/depth_meter_040" },
+        { "predicate": { "depth": 50 }, "model": "randomtech:item/depth_meter/depth_meter_050" },
+        { "predicate": { "depth": 60 }, "model": "randomtech:item/depth_meter/depth_meter_060" },
+        { "predicate": { "depth": 70 }, "model": "randomtech:item/depth_meter/depth_meter_070" },
+        { "predicate": { "depth": 80 }, "model": "randomtech:item/depth_meter/depth_meter_080" },
+        { "predicate": { "depth": 90 }, "model": "randomtech:item/depth_meter/depth_meter_090" },
+        { "predicate": { "depth": 100 }, "model": "randomtech:item/depth_meter/depth_meter_100" },
+        { "predicate": { "depth": 110 }, "model": "randomtech:item/depth_meter/depth_meter_110" },
+        { "predicate": { "depth": 120 }, "model": "randomtech:item/depth_meter/depth_meter_120" },
+        { "predicate": { "depth": 130 }, "model": "randomtech:item/depth_meter/depth_meter_130" },
+        { "predicate": { "depth": 140 }, "model": "randomtech:item/depth_meter/depth_meter_140" },
+        { "predicate": { "depth": 150 }, "model": "randomtech:item/depth_meter/depth_meter_150" },
+        { "predicate": { "depth": 160 }, "model": "randomtech:item/depth_meter/depth_meter_160" },
+        { "predicate": { "depth": 170 }, "model": "randomtech:item/depth_meter/depth_meter_170" },
+        { "predicate": { "depth": 180 }, "model": "randomtech:item/depth_meter/depth_meter_180" },
+        { "predicate": { "depth": 190 }, "model": "randomtech:item/depth_meter/depth_meter_190" },
+        { "predicate": { "depth": 200 }, "model": "randomtech:item/depth_meter/depth_meter_200" },
+        { "predicate": { "depth": 210 }, "model": "randomtech:item/depth_meter/depth_meter_210" },
+        { "predicate": { "depth": 220 }, "model": "randomtech:item/depth_meter/depth_meter_220" },
+        { "predicate": { "depth": 230 }, "model": "randomtech:item/depth_meter/depth_meter_230" },
+        { "predicate": { "depth": 240 }, "model": "randomtech:item/depth_meter/depth_meter_240" },
+        { "predicate": { "depth": 250 }, "model": "randomtech:item/depth_meter/depth_meter_250" }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"PRP",
+		"IGI",
+		"GGG"
+	],
+	"key":
+	{
+		"G":
+		{
+			"item": "minecraft:gold_ingot"
+		},
+		"R":
+		{
+			"item": "minecraft:redstone"
+		},
+		"I":
+		{
+			"item": "minecraft:iron_nugget"
+		},
+		"P":
+		{
+			"type": "forge:ore_dict",
+			"ore": "paneGlass"
+		}
+	},
+	"result":
+	{
+		"item": "randomtech:sextant"
+	}
+}

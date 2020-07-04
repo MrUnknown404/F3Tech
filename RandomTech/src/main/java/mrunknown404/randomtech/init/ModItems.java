@@ -3,6 +3,9 @@ package mrunknown404.randomtech.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import mrunknown404.randomtech.items.ItemBiomeChecker;
+import mrunknown404.randomtech.items.ItemDepthMeter;
+import mrunknown404.randomtech.items.ItemLightDetector;
 import mrunknown404.randomtech.items.ItemMagneticCompass;
 import mrunknown404.randomtech.items.ItemSextant;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,7 +16,10 @@ public class ModItems {
 	
 	public static final Item MAGNETIC_COMPASS = addItem(new ItemMagneticCompass(), "magnetic_compass");
 	public static final Item SEXTANT = addItem(new ItemSextant(), "sextant");
-	//biome, light level, y axis, speed
+	public static final Item BIOME_CHECKER = addItem(new ItemBiomeChecker(), "biome_checker");
+	public static final Item LIGHT_DETECTOR = addItem(new ItemLightDetector(), "light_detector");
+	public static final Item DEPTH_METER = addItem(new ItemDepthMeter(), "depth_meter");
+	//speed
 	
 	private static Item addItem(Item item, String name) {
 		return addItem(item, name, 64, ModCreativeTabs.RANDOMTECH_ITEMS);

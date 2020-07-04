@@ -1,4 +1,7 @@
 item.magnetic_compass.name=Magnetic Compass
 item.sextant.name=Sextant
+item.biome_checker.name=Biome Scanner
+item.light_detector.name=Light Sensor
+item.depth_meter.name=Depth Meter
 
 itemGroup.randomtech_items=R.Tech Items
