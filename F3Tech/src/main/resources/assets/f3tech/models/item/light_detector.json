@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "f3tech:items/light_detector_0"
+    },
+    "overrides": [
+        { "predicate": { "light": 0 }, "model": "f3tech:item/light_detector" },
+        { "predicate": { "light": 1 }, "model": "f3tech:item/light_detector_1" },
+        { "predicate": { "light": 2 }, "model": "f3tech:item/light_detector_2" },
+        { "predicate": { "light": 3 }, "model": "f3tech:item/light_detector_3" }
+    ]
+}

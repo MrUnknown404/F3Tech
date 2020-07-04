@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" S ",
+		"ITI",
+		"GRG"
+	],
+	"key":
+	{
+		"G":
+		{
+			"item": "minecraft:gold_ingot"
+		},
+		"R":
+		{
+			"item": "minecraft:redstone"
+		},
+		"I":
+		{
+			"item": "minecraft:iron_ingot"
+		},
+		"S":
+		{
+			"item": "minecraft:glowstone_dust"
+		},
+		"T":
+		{
+			"item": "minecraft:redstone_torch"
+		}
+	},
+	"result":
+	{
+		"item": "f3tech:light_detector"
+	}
+}

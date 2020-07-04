@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"L T",
+		"DGD",
+		"III"
+	],
+	"key":
+	{
+		"L":
+		{
+			"item": "minecraft:lever"
+		},
+		"T":
+		{
+			"item": "minecraft:redstone_torch"
+		},
+		"D":
+		{
+			"item": "minecraft:diamond"
+		},
+		"G":
+		{
+			"item": "minecraft:glowstone_dust"
+		},
+		"I":
+		{
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result":
+	{
+		"item": "f3tech:depth_meter"
+	}
+}

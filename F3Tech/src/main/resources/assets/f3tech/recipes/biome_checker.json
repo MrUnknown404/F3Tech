@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" T ",
+		"ISI",
+		"IRI"
+	],
+	"key":
+	{
+		"T":
+		{
+			"item": "minecraft:redstone_torch"
+		},
+		"R":
+		{
+			"item": "minecraft:redstone"
+		},
+		"I":
+		{
+			"item": "minecraft:iron_ingot"
+		},
+		"S":
+		{
+			"type": "forge:ore_dict",
+			"ore": "treeSapling"
+		}
+	},
+	"result":
+	{
+		"item": "f3tech:biome_checker"
+	}
+}
