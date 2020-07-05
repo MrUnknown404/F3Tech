@@ -3,5 +3,8 @@ item.sextant.name=Sextant
 item.biome_checker.name=Biome Scanner
 item.light_detector.name=Light Sensor
 item.depth_meter.name=Depth Meter
+item.rain_checker.name=Rain Sensor
+item.calendar.name=Calendar
+item.slime_checker.name=Slime Chunk Finder
 
 itemGroup.f3tech_items=F3 Tech Items

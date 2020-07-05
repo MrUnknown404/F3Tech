@@ -38,7 +38,7 @@ public class ItemMagneticCompass extends Item {
 				double atan = Math.atan(-90);
 				if (!ModConfig.compass_ignore_metal && entity instanceof EntityPlayer) {
 					int range = ModConfig.compass_metal_range;
-					for (MutableBlockPos b : BlockPos.getAllInBoxMutable(entity.getPosition().add(-range, -range, -range), entity.getPosition().add(range, range, range))) {
+					for (MutableBlockPos b : BlockPos.getAllInBoxMutable(new BlockPos(entity.posX, entity.posY, entity.posZ).add(-range, -range, -range), entity.getPosition().add(range, range, range))) {
 						if (Arrays.asList(ModConfig.metal_blocks).contains(world.getBlockState(b).getBlock().getRegistryName().toString())) {
 							atan = Math.atan2(b.getZ() + 0.5 - entity.posZ, b.getX() + 0.5 - entity.posX);
 							break;

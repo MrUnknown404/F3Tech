@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"IRI",
+		"PPP",
+		"PPP"
+	],
+	"key":
+	{
+		"P":
+		{
+			"item": "minecraft:paper"
+		},
+		"R":
+		{
+			"item": "minecraft:dye",
+			"data": 1
+		},
+		"I":
+		{
+			"item": "minecraft:dye",
+			"data": 0
+		}
+	},
+	"result":
+	{
+		"item": "f3tech:calendar"
+	}
+}

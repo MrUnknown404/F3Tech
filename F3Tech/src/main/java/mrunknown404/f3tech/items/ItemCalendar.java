@@ -10,16 +10,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
-public class ItemBiomeChecker extends Item {
+public class ItemCalendar extends Item {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		if (!world.isRemote) {
-			String name = ReflectionHelper.getPrivateValue(Biome.class, world.getBiome(player.getPosition()), "biomeName", "field_185412_a");
-			
-			((EntityPlayerMP) player).connection.sendPacket(new SPacketTitle(Type.ACTIONBAR, new TextComponentString("Biome: " + name)));
+			((EntityPlayerMP) player).connection.sendPacket(new SPacketTitle(Type.ACTIONBAR, new TextComponentString("It is day " + world.getWorldTime() / 24000)));
 		}
 		
 		return super.onItemRightClick(world, player, hand);

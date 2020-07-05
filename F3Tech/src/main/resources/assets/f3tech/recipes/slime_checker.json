@@ -1,0 +1,31 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" T ",
+		"ISI",
+		"IRI"
+	],
+	"key":
+	{
+		"T":
+		{
+			"item": "minecraft:redstone_torch"
+		},
+		"R":
+		{
+			"item": "minecraft:redstone"
+		},
+		"I":
+		{
+			"item": "minecraft:iron_ingot"
+		},
+		"S":
+		{
+			"item": "minecraft:slime_ball"
+		}
+	},
+	"result":
+	{
+		"item": "f3tech:slime_checker"
+	}
+}

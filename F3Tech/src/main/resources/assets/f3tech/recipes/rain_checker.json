@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" T ",
+		"IDI",
+		"IWI"
+	],
+	"key":
+	{
+		"T":
+		{
+			"item": "minecraft:redstone_torch"
+		},
+		"W":
+		{
+			"item": "minecraft:water_bucket"
+		},
+		"I":
+		{
+			"item": "minecraft:iron_ingot"
+		},
+		"D":
+		{
+			"item": "minecraft:dye",
+			"data": 4
+		}
+	},
+	"result":
+	{
+		"item": "f3tech:rain_checker"
+	}
+}
