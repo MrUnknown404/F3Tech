@@ -27,7 +27,7 @@ public class ItemSextant extends Item {
 	public void onPlayerStoppedUsing(ItemStack stack, World world, EntityLivingBase entity, int timeLeft) {
 		if (!world.isRemote && entity instanceof EntityPlayer && getMaxItemUseDuration(stack) - timeLeft >= getMaxItemUseDuration(stack) / 3600) {
 			((EntityPlayerMP) entity).connection
-			.sendPacket(new SPacketTitle(Type.ACTIONBAR, new TextComponentString("X: " + getNum(entity, entity.posX) + " | Z: " + getNum(entity, entity.posZ))));
+			.sendPacket(new SPacketTitle(Type.ACTIONBAR, new TextComponentString("X: " + getNum(entity.posX) + " | Z: " + getNum(entity.posZ))));
 		}
 	}
 	
@@ -41,7 +41,7 @@ public class ItemSextant extends Item {
 		return EnumAction.BOW;
 	}
 	
-	private static String getNum(EntityLivingBase player, double num) {
+	private static String getNum(double num) {
 		int acc = ModConfig.sextant_accuracy;
 		
 		if (acc < 0) {

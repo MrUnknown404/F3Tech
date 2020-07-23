@@ -25,7 +25,7 @@ public class ModItems {
 	public static final Item RAIN_CHECKER = addItem(new ItemRainChecker(), "rain_checker");
 	public static final Item CALENDAR = addItem(new ItemCalendar(), "calendar");
 	public static final Item SLIME_CHECKER = addItem(new ItemSlimeChecker(), "slime_checker");
-	//stopwatch?
+	//TODO stopwatch?
 	
 	private static Item addItem(Item item, String name) {
 		return addItem(item, name, 64, ModCreativeTabs.F3TECH_ITEMS);

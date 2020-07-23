@@ -28,21 +28,21 @@ public class Main {
 	public static ICommonProxy proxy;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent e) {
+	public void preInit(@SuppressWarnings("unused") FMLPreInitializationEvent e) {
 		proxy.preInit();
 		
 		MinecraftForge.EVENT_BUS.register(new SlimeSeedHandler());
 	}
 	
 	@EventHandler
-	public void init(FMLInitializationEvent e) {
+	public void init(@SuppressWarnings("unused") FMLInitializationEvent e) {
 		proxy.init();
 		
 		NETWORK.registerMessage(MessageSlimeSeed.class, MessageSlimeSeed.class, 0, Side.CLIENT);
 	}
 	
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent e) {
+	public void postInit(@SuppressWarnings("unused") FMLPostInitializationEvent e) {
 		proxy.postInit();
 	}
 }
